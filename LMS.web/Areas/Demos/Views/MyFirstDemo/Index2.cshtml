@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //map the page layout for this razor view page
+    this.Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    string author = "Abhijit Jagadale";
+}
+
+
+
+<h1>Index 2 demo</h1>
+@* SERVER SIDE COMMENT: This comment willnot be render on browser*@
+<!--CLIENT SIDE HTMLCOMMENT:Below line shows C# code being embeded inside HTML content-->
+<p>This page has been designed by @author.ToUpper()</p>
+<div style="height:100%; width:100% ;background-image:url('D:\VisualStudio\Asp.netSolutionNo1\LMS.web\Areas\Demos\Views\MyFirstDemo\mustang.jpg');background-size:cover " >
+   
+<div class="text-center" style="background-color: #F7DC6F; align-items:center; ">
+    <h1 style="text-align: center; color: darkblue; background-color: cyan;"> Ecommerce Webpage</h1>
+ 
+    <br>
+    <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googinhydr1-21&ref=pd_sl_6dkrl2zrc6_b&adgrpid=116300674033&hvpone=&hvptwo=&hvadid=485367627114&hvpos=&hvnetw=g&hvrand=5621865396090489893&hvqmt=b&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9302184&hvtargid=kwd-299872486443&hydadcr=5909_2171255&gclid=Cj0KCQjwio6XBhCMARIsAC0u9aFftnwtiyxfCoBPKkKYE7xtE-A4FG3gd1epZJOpYdP02PAb9y_31XIaAsx_EALw_wcB" style="color: blue; background-color: yellow;font-size: 20px;font-family: sans-serif; text-align:center">Home</a>
+    <br />
+    <a href="https://www.aboutamazon.com/" style="color: blue; background-color: yellow;font-size: 20px;font-family: sans-serif; text-align:center">About us</a>
+    <br>
+    <a href="https://www.google.com/search?q=amazon&oq=Amazon&aqs=chrome.0.0i67i131i355i433j46i67i131i199i433i465j0i67i131i433j0i67j0i67i131i433l2j0i67l3.3713j0j4&sourceid=chrome&ie=UTF-8" style="color: blue; background-color: yellow;font-size: 20px;font-family: sans-serif; text-align:center">Search for Products</a>
+    <br>
+    <a href="https://www.google.com/search?q=amazon+contact+number&oq=amazon+contact&aqs=chrome.0.0i131i433i457i512j69i57j0i402l2j0i131i433i512j0i512l5.4270j0j4&sourceid=chrome&ie=UTF-8" style="color: blue; background-color: yellow;font-size: 20px;font-family: sans-serif; text-align:center">Contact</a>
+</div>
+</div>
+<div> <img src="D:\VisualStudio\Asp.netSolutionNo1\LMS.web\wwwroot\Img\mustang.jpg";height="20rem "/></div>
