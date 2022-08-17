@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.Text.Json.Serialization;
 
 namespace LMS.web.Models
 {
@@ -11,44 +11,44 @@ namespace LMS.web.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
         virtual public int BookId { get; set; }
 
         [Required]
         [StringLength(100)]
-
-         virtual public string Title { get; set; }
+        virtual public string Title { get; set; }
 
         [Required]
         [DefaultValue(1)]
-
-         virtual public short NumberOfCopies { get; set; }
+        virtual public short NumberOfCopies { get; set; }
 
         [Required]
         [DefaultValue(false)]
-
         virtual public bool IsEnabled { get; set; }
 
         [StringLength(120)]
-
         virtual public string ImageUrl { get; set; } = null;
+
 
         #region Navigation Properties to the Category Model
 
         virtual public int CategoryId { get; set; }
 
-
+        [JsonIgnore]            // Suppress the information about the FK Object to the API.
         [ForeignKey(nameof(Book.CategoryId))]
         public Category Category { get; set; }
 
         #endregion
 
+
         #region Navigation Properties to the Author Model
 
+        [JsonIgnore]            // Suppress the information about the FK Collection to the API.
         public ICollection<Author> Authors { get; set; }
 
         #endregion
+
     }
+
     /****************************
    *      CREATE TABLE [Books]
    *      (

@@ -4,6 +4,13 @@ using System.Text;
 
 using Xunit;
 using Xunit.Abstractions;
+using Moq;
+using Microsoft.Extensions.Logging;
+using LMS.Web.Controllers;
+using LMS.web.Models;
+using Microsoft.AspNetCore.Mvc;
+using FluentAssertions;
+
 
 // NOTE:
 // Add the following NuGet PACKAGES:
@@ -12,25 +19,17 @@ using Xunit.Abstractions;
 //      Microsoft.EntityFrameworkCore.InMemory      (same version as EFCore in the LMS.Web project
 // Also add REFERENCE to the LMS.Web Project
 
-
-namespace LMS.xUnitTestsProject
+namespace LMS.xUnitTestProject
 {
-    public class CategoriesApiTests
+    public partial class CategoriesApiTests
     {
-        private readonly ITestOutputHelper testOutputHelper;
+        private readonly ITestOutputHelper _testOutputHelper;
 
         public CategoriesApiTests(
             ITestOutputHelper testOutputHelper)
         {
-            this.testOutputHelper = testOutputHelper;
+            _testOutputHelper = testOutputHelper;
         }
 
-        [Fact]
-        public void Test1()
-        {
-            // 1. ARRANGE
-            // 2. ACT
-            // 3. ASSERT
-        }
     }
 }

@@ -18,12 +18,12 @@ namespace LMS.xUnitTestsProject
         public void Test1()
         {
             // ARRANGE
-            int expectedResult = 4;
+            int expectedResult = 60;
             int actualResult;
-            int a = 1, b = 3;
+            int a = 5, b = 10, c =25, d=10, e=10;
 
             // ACT
-            actualResult = a + b;
+            actualResult = a + b + c + d + e;
 
             _testOutputHelper.WriteLine($"input values are {a} and {b}");
             _testOutputHelper.WriteLine($"expectedResult = {expectedResult}, ActualResult = {actualResult}");
